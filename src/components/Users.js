@@ -7,13 +7,14 @@ class Users extends Component {
     const userData = users.map((user, index) => {
       return (
         <div className="col-sm-6 col-md-3">
-          <div className="card" key={user.id}>
+          <div className="card" key={index}>
             <img
               className="card-image"
               src={user.profile_pic_url}
               alt="profile"
             />
             <div className="card-body">
+              <label>fddfdf</label>
               <h4 className="card-title">Name: {user.name}</h4>
               <ul className="card-text">ID: {user.id}</ul>
               <ul className="card-text">Bio: {user.bio}</ul>
