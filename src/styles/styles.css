@@ -1,0 +1,10 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.card {
+  width: 400px;
+}
+.card-image {
+  width: 100%;
+}
