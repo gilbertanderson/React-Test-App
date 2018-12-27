@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import users from "../assets/mock-users";
 import "../styles/styles.css";
 
-class Users extends Component {
+export class Users extends Component {
   render() {
     const userData = users.map((user, index) => {
       return (
@@ -14,8 +14,9 @@ class Users extends Component {
               alt="profile"
             />
             <div className="card-body">
-              <label>fddfdf</label>
-              <h4 className="card-title">Name: {user.name}</h4>
+              <label>
+                <h4 className="card-title">Name: {user.name}</h4>
+              </label>
               <ul className="card-text">ID: {user.id}</ul>
               <ul className="card-text">Bio: {user.bio}</ul>
             </div>
@@ -30,5 +31,3 @@ class Users extends Component {
     );
   }
 }
-
-export default Users;

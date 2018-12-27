@@ -1,11 +1,25 @@
 import React, { Component } from "react";
-import Gallery from "./Gallery";
+import { Users } from "./Users";
+import { SelectUser } from "./SelectUser";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { user: "user0" };
+  }
+
+  changeUser(newUser) {
+    this.setState({
+      user: newUser
+    });
+  }
+
   render() {
     return (
       <div>
-        <Gallery />
+        <SelectUser onChange={this.changeUser} />
+        <Users selectedUser={this.state.user} />
       </div>
     );
   }
